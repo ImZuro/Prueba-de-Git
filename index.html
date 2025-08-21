@@ -8,5 +8,18 @@
 <body>
     <h1>Bienvenido a la prueba de Git</h1>
     <p>Este es un documento de prueba para demostrar el uso de Git.</p>
+
+    <div>
+        <input type="text" placeholder="Ingrese su nombre">
+        <span id="name">Tu nombre es: </span>
+    </div>
+
+    <script>
+        const name = document.getElementById("name");
+        const input = document.querySelector("input[type='text']");
+        input.addEventListener("input", (event) => {
+            name.textContent = `Tu nombre es: ${event.target.value}`;
+        });
+    </script>
 </body>
 </html>
